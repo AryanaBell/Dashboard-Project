@@ -18,9 +18,9 @@ def index():
     if chart_type == "bar":
         fig = px.bar(df, x="Country", y="Export_Value_USD", color="Year", title="Coffee Export Value by Country")
     elif chart_type == "scatter":
-        fig = px.scatter(df, x="Country", y="Export_Tons", color="Year", title="Coffee Export Tons Over Time")
+        fig = px.scatter(df, x="Country", y="Export_Tons", color="Year", title="Coffee Export by Country")
     else:
-        fig = px.box(df, x="Region", y="Export_Value_USD", color="Region", title="Export Value Distribution by Region")
+        fig = px.box(df, x="Region", y="Export_Value_USD", color="Year", title="Export Value Distribution by Region")
 
     # Dark layout
     fig.update_layout(
